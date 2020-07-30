@@ -1,0 +1,59 @@
+<!--
+File: /~alora1/public_html/assignments/4/index.html (91.46) COMP 4610 GUI Programming I
+Assignment 5: Dynmaic Multiplication Table
+Ambioris Lora, UMass Lowell Computer Science, alora1@cs.uml.edu
+Copyright (c) 2020 by Ambioris Lora. All rights reserved. May be
+freely
+copied or excerpted for educational purposes with credit to the
+author.
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>Assignment 5</title>
+
+      <!-- Style sheet for webpage -->
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <h2>Welcome To My Multiplication Table For GUI</h2>
+      <form action="/action_page.php">
+        <label for="fname">Starting Number For Horizontal Row</label><br>
+        <input type="text" id="SHR" name="SHR"><br>
+        <label for="lname">Ending Number For Horizontal Row</label><br>
+        <input type="text" id="EHR" name="EHR"><br>
+        <label for="fname">Starting Number for Vertical Row</label><br>
+        <input type="text" id="SVR" name="SVR"><br>
+        <label for="lname">Ending Number for Vertical Row</label><br>
+        <input type="text" id="EVR" name="EVR"><br>
+        <button class = "but_sub" type="button" onclick="numValid()">Submit</button>
+      </form>
+      <p id = "Validation1"></p>
+      <p id = "Validation2"></p>
+      <p id = "Validation3"></p>
+      <p id = "Validation4"></p>
+      <p id = "Validation5"></p>
+      <p id = "Validation6"></p>
+      <p id = "Validation7"></p>
+
+      <!-- Rules For using the Table -->
+      <div class="rules">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Enter a Number from -50 to 50</li>
+          <li>Do not enter anything that is not a number</li>
+          <li>Do not enter a number in descending Order EX. 8-5 or 7-1</li>
+          <li>I will Not allow negative Numbers to stay negative. I will Perform Absolute value on them</li>
+          <li>Do not put the same numbers in a row or column EX. 5-5</li>
+          <li>Do not put Zero</li>
+          <li>Do not put e</li>
+          <li>Correct Requirements Will Be Green and Incorrect Red</li>
+        </ol>
+      </div>
+      <table id="myTable">
+      </table>
+      <!--This Javascript file is for validation of inputs and generating the table -->
+      <script src="generate.js"></script>
+    </body>
+</html>
